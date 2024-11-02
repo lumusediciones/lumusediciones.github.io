@@ -1,0 +1,472 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    padding: 50px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Página de Inicio */
+.home {
+    position: fixed; /* Necesario para posicionar el pseudo-elemento */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    color: #fff;
+    background-color: #1b1b1b;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Asegura que el banner esté por encima del contenido */
+}
+
+.intro {
+    text-align: center; /* Alinea el texto a la derecha */
+    margin-right: -20px; /* Margen derecho para dar un poco de espacio */
+    color: #fff; /* Asegúrate de que el texto sea legible */
+}
+
+.content {
+    margin-top: 100px; /* Da un margen para que el contenido no se superponga al banner */
+    padding: 0px; /* Espaciado interno para el contenido */
+}
+
+
+
+.home h1, .home p {
+    margin: 0; /* Opcional: elimina margenes para una mejor alineación */
+    position: relative;
+    z-index: 2;
+}
+
+/* Efecto de brillo leve en el título del banner */
+.home h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+    color: #fff; /* Color del texto */
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.5),  /* Brillo suave alrededor */
+        0 0 10px rgba(255, 255, 255, 0.3), /* Más difuso */
+        0 0 12px rgba(255, 255, 255, 0.1); /* Mayor difuminado */
+}
+
+.home p {
+    font-size: 1.0em; 
+    font-weight: 300; 
+    font-family: 'Arial', sans-serif; 
+    max-width: 700px;
+    line-height: 1.5;
+    text-shadow: 
+        0 0 3px rgba(255, 255, 255, 0.3),  /* Brillo suave alrededor */
+        0 0 5px rgba(255, 255, 255, 0.1);  /* Más difuso */
+}
+
+.logo {
+    width: 120px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: absolute; /* Permite posicionarlo en la sección */
+    top: 5px; /* Ajusta la posición vertical */
+    left: 5px; /* Ajusta la posición horizontal */
+    z-index: 3; /* Asegura que el logo esté por encima de otros elementos */
+}
+
+/* Sección de Libros de la Autora */
+
+.highlighted-books2 {
+    background: #f4f4f4;
+    text-align: center; /* Centra el contenido de la sección */
+    padding: 10px 0px 80px; /* Espaciado adecuado */
+}
+
+.highlighted-books2 h2 {
+    font-size: 2.5em; /* Tamaño del título */
+    margin-bottom: 40px; /* Espacio debajo del título */
+    margin-top: 50px; /* Ajusta este valor según el espacio necesario */
+    color: #333; /* Color del texto */
+    text-transform: uppercase; /* Hace el texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: 700; /* Peso de la fuente más pesado para mayor impacto */
+    position: relative; /* Posición relativa para efectos adicionales */
+        text-shadow: 
+        0 0 10px rgba(255, 255, 255, 1.1), /* Brillo suave alrededor */
+        0 0 20px rgba(255, 255, 255, 0.8); /* Más difuso */
+}
+
+/* Sombra para el título */
+.highlighted-books2 h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Espacio entre el título y la línea */
+    width: 50%; /* Ancho de la línea */
+    height: 5px; /* Altura de la línea */
+    background-color: #ff6600; /* Color de la línea (puedes cambiarlo) */
+    transform: translateX(-50%); /* Centra la línea horizontalmente */
+}
+
+/* Sección de Libros Destacados */
+.highlighted-books {
+    background: #f4f4f4;
+    text-align: center; /* Centra el contenido de la sección */
+    padding: 300px 0px 50px; /* Espaciado adecuado */
+}
+
+.highlighted-books h2 {
+    font-size: 2.5em; /* Tamaño del título */
+    margin-bottom: 40px; /* Espacio debajo del título */
+    margin-top: 5px; /* Ajusta este valor según el espacio necesario */
+    color: #333; /* Color del texto */
+    text-transform: uppercase; /* Hace el texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: 700; /* Peso de la fuente más pesado para mayor impacto */
+    position: relative; /* Posición relativa para efectos adicionales */
+        text-shadow: 
+        0 0 10px rgba(255, 255, 255, 1.1), /* Brillo suave alrededor */
+        0 0 20px rgba(255, 255, 255, 0.8); /* Más difuso */
+}
+
+/* Sombra para el título */
+.highlighted-books h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Espacio entre el título y la línea */
+    width: 50%; /* Ancho de la línea */
+    height: 5px; /* Altura de la línea */
+    background-color: #ff6600; /* Color de la línea (puedes cambiarlo) */
+    transform: translateX(-50%); /* Centra la línea horizontalmente */
+}
+
+.book-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+    height: 300px; /* Altura fija para asegurar que todos tengan la misma altura */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.boton-compra {
+    display: inline-block; /* Muestra el botón como un bloque en línea */
+    padding: 10px 20px; /* Espaciado interno */
+    color: #fff; /* Color del texto */
+    background-color: #ff6600; /* Color de fondo */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transición */
+    margin-top: 5px; /* Espacio superior para separar del contenido anterior */
+}
+
+.boton-compra:hover {
+    background-color: #cc5200; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+.button-container {
+    margin-top: 20px; /* Empuja el botón hacia abajo */
+
+}
+
+/* Sección de Cursos */
+.courses {
+    padding top: 0px;
+    /*background: url('../img/fondo1.jpeg') no-repeat center center/cover; /* Imagen de fondo llamativa */
+    background-color: #333; /* Gris oscuro */
+    text-align: center; /* Centra todos los elementos dentro del contenedor */
+    color: #fff;
+}
+
+.courses h2 {
+    font-size: 2.5em; /* Tamaño del título */
+    margin-bottom: 40px; /* Espacio debajo del título */
+    margin-top: 20px; /* Ajusta este valor según el espacio necesario */
+    color: #fff; /* Color del texto */
+    text-transform: uppercase; /* Hace el texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: 700; /* Peso de la fuente más pesado para mayor impacto */
+    position: relative; /* Posición relativa para efectos adicionales */
+        text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.3), /* Brillo suave alrededor */
+        0 0 20px rgba(255, 255, 255, 0.1); /* Más difuso */
+}
+
+/* Sombra para el título */
+.courses h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Espacio entre el título y la línea */
+    width: 50%; /* Ancho de la línea */
+    height: 5px; /* Altura de la línea */
+    background-color: #ff6600; /* Color de la línea (puedes cambiarlo) */
+    transform: translateX(-50%); /* Centra la línea horizontalmente */
+}
+
+.courses-grid {
+    display: flex; /* Usa flexbox para alinear los cursos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay espacio */
+    justify-content: center; /* Centra los elementos en la línea */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.courses-item {
+    border: 1px solid #ccc; /* Añade un borde para cada curso */
+    padding: 10px; /* Espaciado interno */
+    max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+    text-align: center; /* Centra el texto dentro de cada curso */
+}
+
+.courses-item img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Página de Blog */
+.seccion-blog {
+    background-color: #f2f2f2; /* Fondo gris muy claro */
+    color: #333; /* Texto oscuro para contraste */
+    text-align: center;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.seccion-blog h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.seccion-blog p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.boton-blog {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #ff6600; /* Color naranja para el botón */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-blog:hover {
+    background-color: #cc5200; /* Naranja más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+
+
+/* Página de Contacto */
+.contacto-seccion {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url('../img/fondo.jpeg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-bottom: 30px; /* Espacio adicional en la parte inferior */
+
+}
+
+.contacto-seccion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Capa semitransparente */
+    z-index: 1;
+}
+
+.contacto-seccion h2, .contacto-seccion .redes-sociales, .titulo-redes {
+    position: relative;
+    z-index: 2;
+    color: #fff; /* Texto blanco */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Efecto de brillo suave */
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio entre los íconos */
+}
+
+.redes-sociales a img {
+    width: 40px; /* Tamaño de los íconos */
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+
+}
+
+.redes-sociales a:hover img {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+    filter: brightness(1.5); /* Aumenta el brillo del ícono */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Agrega una sombra de brillo */
+}
+
+.footer {
+    position: fixed; /* Fija el pie de página en la parte inferior */
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espaciado vertical */
+    font-size: 14px; /* Tamaño de fuente */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.whatsapp-button {
+    position: fixed; /* Fija el botón en la ventana */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Para centrar el icono */
+    justify-content: center; /* Centra el icono */
+    align-items: center; /* Centra el icono */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.whatsapp-button img {
+    width: 30px; /* Ancho del icono */
+    height: auto; /* Mantiene la proporción */
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.1); /* Efecto de agrandado */
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+
+    .logo {
+    display: none; /* Oculta el logo cuando el ancho es menor o igual a 768px */
+    }
+
+    .home {
+        height: auto; /* Permite que la sección se ajuste al contenido */
+        padding: 20px; /* Espaciado adicional */
+        background-image: url('../img/logo.jpeg'); /* Agrega la imagen de logo como fondo en dispositivos pequeños */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; /* Mantiene las proporciones del logo */
+        background-color: black;
+        filter: brightness(0.6); /* Oscurece ligeramente para mejor contraste */
+    }
+    
+    .home h1 {
+        font-size: 1.8em; /* Reduce el tamaño del texto en dispositivos móviles */
+        margin-bottom: 10px;
+    }
+
+    .home p {
+        font-size: 1em; /* Reduce el tamaño del párrafo */
+        max-width: 90%; /* Ajusta el ancho del texto */
+        line-height: 1.4;
+    }
+
+    /* Espaciado y centrado para botones y otros elementos */
+    .home .button {
+        padding: 10px 20px; /* Botones más compactos */
+        font-size: 1em;
+        margin-top: 15px;
+    }
+
+        .book-grid {
+        flex-direction: column; /* Cambia a una sola columna */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .book-item {
+        max-width: 90%; /* Ocupa casi todo el ancho de la pantalla */
+        height: auto;
+        padding: 15px;
+    }
+
+    .book-item img {
+        width: 100%; /* Asegura que la imagen no se desborde */
+        height: auto;
+    }
+
+    .book-item .buy-button {
+        margin-top: 10px; /* Asegura que el botón esté bien posicionado */
+    }
+
+    .contacto-seccion {
+    padding: 30px 15px;
+    margin-bottom: 60px; /* Espacio adicional en la parte inferior para dispositivos pequeños */
+    }
+
+        footer {
+        font-size: 12px; /* Reduce el tamaño de fuente para pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .whatsapp-icon {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px; /* Posición en la esquina, ajustada para pantallas más pequeñas */
+    }
+
+    .whatsapp-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+}
